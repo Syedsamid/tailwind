@@ -106,7 +106,89 @@
             <div class="w-120 h-120 bg-black opacity-10"></div>
           </div>
         </div>
+        
       </section>
+      <section class="w-full reletive">
+        <img class="w-full" src="./assets/bgdots.png" alt="">
+            <div class="overlaytext absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+            </div>
+      
+      <section class="testimonials px-[10rem]">
+        <h3 class="text-6xl font-medium">Client</h3>
+        <div class="flex gap-20 items-center">
+            <h1 class="text-[12rem] leading-none font-bold tracking-tighter">Testimonials</h1>
+            <img src="./assets/arrow.png" alt="">
+            <h1 class="text-[12rem] leading-none font-bold tracking-tighter">works</h1>
+        </div>
+        <div class="workshowcase">
+          <div class="mt-20">
+              <h1 class="text-5xl font-medium tracking-tight">Britannia</h1>
+              <div class="flex gap-2 mt-3">
+                  <h3 class="text-2xl font-medium font-['IBM_3270']">2017</h3>
+                  <img class="w-20" src="./assets/arrow.png" alt="">
+                  <h3 class="text-2xl font-medium">Mumbai</h3>
+              </div>
+              <div class="w-full h-140 mt-4 bg-red-500">
+                  <img class="w-full h-full object-cover object-[0%_20%]"
+                      src="https://images.unsplash.com/photo-1622405207562-735fa49ff7f7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="">
+              </div>
+          </div>
+          <div class="flex justify-between mt-20">
+              <div class="w-150 py-3">
+                  <h1 class="text-6xl font-medium tracking-tight">Orange Splash</h1>
+                  <div class="flex gap-2 mt-3">
+                      <h3 class="text-4xl font-medium font-['IBM_3270']">2026</h3>
+                      <img class="w-30" src="./assets/arrow.png" alt="">
+                      <h3 class="text-3xl font-medium">Pariss</h3>
+                  </div>
+                  <div class="w-full h-190 mt-3 bg-red-500">
+                      <img class="w-full h-full object-cover"
+                          src="https://images.unsplash.com/photo-1738008896551-9ab767d9e6ac?q=80&w=2699&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          alt="">
+                  </div>
+              </div>
+              <div class="w-300 py-3 mt-30">
+                  <h1 class="text-6xl font-medium tracking-tight">Damam</h1>
+                  <div class="flex gap-2 mt-3">
+                      <h3 class="text-4xl font-medium font-['IBM_3270']">2025</h3>
+                      <img class="w-30" src="./assets/arrow.png" alt="">
+                      <h3 class="text-3xl font-medium">Saudi</h3>
+                  </div>
+                  <div class="w-full h-190 mt-3 bg-red-500">
+                      <img class="w-full h-full object-cover"
+                          src="https://images.unsplash.com/photo-1738234402655-f44627aaa094?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+    <section class="footer flex justify-between px-[10rem] mt-20">
+      <h3 class="tracking-tight"><span class="font-bold">Syed</span> Samid Saud</h3>
+      <h4 class="font-medium dt">20 Feb 2025 [3:54 AM]</h4>
+  </section>
+            
     </main>
+    <script>
+      function changeTime() {
+          var dt = new Date();
+          var str = dt.getHours() % 12 + ":" + dt.getMinutes();
+          dt.getHours() % 12 > 0 ? str += " PM" : str += " AM";
+          document.querySelector(".timing").textContent = str;
+      }
+
+      function changeDateAndTime() {
+          var dt2 = new Date();
+          var str = dt2.getDate() + ' / ' + (dt2.getMonth() + 1) + ' / ' + dt2.getFullYear() + "   " + dt2.getHours() % 12 + ":" + dt2.getMinutes();
+          dt2.getHours() % 12 > 0 ? str += " PM" : str += " AM";
+          document.querySelector(".dt").textContent = str;
+      }
+
+      setInterval(function () {
+          changeTime();
+          changeDateAndTime();
+      }, 1000)
+  </script>
   </body>
 </html>
